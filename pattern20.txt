@@ -2,23 +2,43 @@
 
 int main()
 {
-   int i,j,n,k,l;
-   printf("enter n value");
-   scanf("%d",&n);
-   for(i=1;i<=n;i++)
-   {
-       l=i;
-       k=4;
-       for(j=1;j<=i;j++)
-       {
-           printf("%d",l);
-           printf(" ");
-           l+=k;
-           k--;
-           
-       }
-       printf("\n");
-   }
+    int i,j,n,k=1,l;
+    printf("enter n value");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=n-i+1;j++)
+        {
+            printf("*");
+        }
+        for(j=1;j<=k;j++)
+        {
+            printf(" ");
+        }
+        for(j=1;j<=n-i+1;j++)
+        {
+            printf("*");
+        }
+        k+=2;
+        l=k-2;
+        printf("\n");
+    }
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("*");
+        }
+        for(j=1;j<=l;j++)
+        {
+            printf(" ");
+        }for(j=1;j<=i;j++)
+        {
+            printf("*");
+        }
+        l-=2;
+        printf("\n");
+    }
 
     return 0;
 }
