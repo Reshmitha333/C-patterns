@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+string sp ( int x ){
+    string s="";
+    while(x>0) 
+    {
+        s+=' ';
+        x--;
+        
+    }
+    return s;
+}
+int main() {
+  int i,j,n,k=1,l,m=1;
+  scanf("%d",&n);
+  for(i=1;i<=n;i++)
+  {
+       int l = n*n*n*n;
+      int d = log10(l)+2;
+      string s = sp(d);
+      for(j=1;j<=n-i;j++)
+      {
+          cout<<s;
+      }
+     
+      for(j=1;j<=k;j++)
+      {
+          printf("%*d",d,m*m);
+          m++;
+      }
+      k=k+2;
+      printf("\n");
+  }
+  
+}
+
+
